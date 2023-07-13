@@ -1,0 +1,102 @@
+@import "../../App.sass"
+
+.blog_section
+    padding: 0 $largePadding $largePadding $largePadding
+    z-index: 1
+
+    .blog_container_div
+        padding: 1.5rem
+        @media screen and (max-width: 768px)
+            padding: 0.5rem
+            
+        .blog_item
+            display: none
+            position: relative
+            &:nth-child(1),
+            &:nth-child(2),
+            &:nth-child(3)
+                display: inline-block
+                transition: $transition
+
+            .blog_item_link
+                position: relative
+                display: block
+                text-decoration: none
+                &:hover
+                    text-decoration: none !important
+                &:hover .blog_item_img,
+                &:hover .blog_item_content
+                    left: 0
+                    transition: $transition
+                &:hover .blog_item_content h2
+                    @include textHover
+
+                .blog_item_img
+                    position: relative
+                    @include setWidthHeight(100%, 230px)
+                    background-repeat: no-repeat
+                    background-position: center center
+                    background-size: auto
+                    box-shadow: $boxShadow
+                    transition: $transition
+
+                .blog_item_content
+                    position: relative
+                    width: 100%
+                    min-height: 100%
+                    padding: $largePadding
+                    box-shadow: $boxShadow
+                    transition: $transition
+                    left: -10px
+                    h2
+                        padding: $medPadding $medPadding 0 0 
+                        @include textBgEffect
+                    
+                    .blog_item_label
+                        position: absolute
+                        left: 20px
+                        top: -15px
+                        color: $lightFont
+                        padding: $smallPadding $medPadding
+                        font-size: $smallFont
+                        font-weight: $semiBold
+                        background: $danger
+                        box-shadow: $boxShadow
+
+                .blog_section_heading
+                    line-height: 1.5
+
+            .copy_icon
+                position: absolute
+                right: 25px
+                top: 260px
+                cursor: pointer
+                &:hover
+                    color: $primary
+
+#load-more-btn
+    margin: 0 auto
+    padding: $standardPadding $largePadding
+    background-color: $primary
+    color: $lightFont
+    outline: none
+    &:hover
+        box-shadow: $boxShadowHover
+    &:focus
+        background-color: $primary
+        color: $lightFont
+
+#load-more-btn,
+#no-content-btn 
+    display: block
+    position: relative
+
+#no-content-btn
+    display: none
+    margin: 0 auto
+    color: $lightFont
+    background-color: $danger
+    padding: $standardPadding $largePadding
+
+
+

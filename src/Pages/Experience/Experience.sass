@@ -1,0 +1,112 @@
+@import "../../App.sass"
+
+.experience_section
+    margin-top: 0
+    overflow: hidden
+
+    .experience_div_container
+        @media screen and (max-width: 680px)
+            padding-right: 0 !important
+            padding-left: 0 !important
+
+        .experience_wrapper_div
+            overflow-x: hidden
+            position: relative
+
+            .timeline_label
+                @include displayJustifyAlign(flex, center , center)
+
+                img
+                    align-items: center
+                    animation: floating 5s linear infinite alternate-reverse
+                    @media screen and (max-width: 360px)
+                        width: 100%
+
+            .timeline_column
+                @include displayJustifyAlign(flex, center , center)
+                flex-direction: column
+                time
+                    display: block
+                    width: 65px
+                    text-align: center
+                    font-weight: $semiBold
+                    font-size: $extraSmallFont
+
+                .experience_item_wrapper
+
+                    .experience_item
+                        position: relative
+                        float: left
+                        margin-left: $largeMargin
+                        padding-left: $largePadding
+                        border-left: 2px solid $fadeLight
+
+                        .timeline_circle
+                            position: absolute
+                            top: 16px
+                            left: -13px
+                            display: block
+                            @include setWidthHeight(25px, 25px)
+                            border-radius: 50%
+                            background-color: #ac75e9
+                        .two
+                            background-color: #4ab25d
+
+                        .timeline_img
+                            float: left
+                            @include setWidthHeight(64px, 64px)
+                            @include textBgEffect
+                            &:hover ~ #first a,
+                            &:hover ~ #first .timeline_role_title,
+                            &:hover ~ #second a,
+                            &:hover ~ #second .timeline_role_title
+                                background-size: 100% 2px !important
+
+                        .timeline_info
+                            margin-left: 10rem
+                            a
+                                margin-top: $smallMargin
+                                font-weight: $semiBold
+                                @include resetTextDecoration
+                                @include textBgEffect
+                                &:hover
+                                    @include textHover
+                            p
+                                font-weight: $semiBold
+
+                        #first
+                            color: #ac75e9
+
+                        #second
+                            color: #4ab25d
+
+.projects_section
+    background: $lightFont
+    padding-top: calc($medPadding / 2)
+    border-top-left-radius: $largePadding*3
+    border-top-right-radius: $largePadding*3
+
+.projects_div_wrapper
+    @include displayGridColRow(grid, repeat(auto-fit, minmax(350px, 1fr)), auto )
+    margin: $smallMargin
+    padding: $smallPadding
+    @media screen and (max-width: 680px)
+        @include displayJustifyAlign(flex, center, center)
+        flex-direction: column
+        padding: $standardPadding $smallPadding
+
+    .project_div
+        background-color: #fbfbfb
+        margin: $largeMargin
+        padding: $medPadding
+        border-radius: 0
+        box-shadow: $boxShadow
+
+        p
+            padding: calc($medPadding / 2)
+            margin-bottom: 0
+
+        .project_links_div
+            @include displayJustifyAlign(flex, space-between, center)
+                    
+

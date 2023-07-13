@@ -1,0 +1,56 @@
+@import "../App.sass"
+    
+.footer_section
+    position: inherit
+    @include setWidthHeight(100%, auto)
+    overflow-x: hidden
+    box-shadow: $boxShadow
+    @media screen and (max-width: 768px)
+        padding-top: $largePadding
+
+    .footer_div_wrapper
+        width: 100%
+        @include displayGridColRow(grid , repeat(2, 1fr), auto)
+        place-items: center !important
+        @media screen and (max-width: 768px)
+            width: 100%
+            padding: 0
+        @media screen and (max-width: 600px)
+            grid-template-columns: 1fr
+            justify-items: left !important
+
+        .quote_div
+            strong
+                line-height: 1.2
+                &::before
+                    content: "\201C"
+                    font-size: 3rem
+                    color: $fadeLight
+                span
+                    color: $primary
+
+        .footer_social_links_div
+            @media screen and (max-width: 1024px)
+                @include displayJustifyAlign(flex, center, center)
+                flex-direction: column
+                margin: $standardMargin auto
+
+            .fa-arrow-right 
+                color: rgba(228, 148, 0, 0.733)
+
+            .form-inline
+                padding: $smallPadding 0
+                width: 100%
+
+                .input-group
+                    .form-control
+                        background: $fadeLight
+                    input
+                        &::placeholder
+                            color: $fadeGray !important
+                            opacity: $standardOpacity !important
+
+                    .input-group-prepend
+                        .input-group-text
+                            background: $fadeLight !important
+              

@@ -1,0 +1,68 @@
+@import "../../App.sass"
+
+form
+    width: 75%
+    margin: $largeMargin auto
+
+    .form_title_div
+        h1
+            letter-spacing: 6px
+            border-bottom: 1px solid $fadeGray
+            display: inline-block
+            padding-bottom: $standardPadding
+            margin-bottom: $largeMargin*2
+
+    .form_name_and_email_div
+        @include displayJustifyAlign(flex, space-between, center)
+        @media (max-width: 500px)
+            flex-direction: column
+        .form_item
+            display: flex
+            flex-direction: column
+            margin-bottom: $largeMargin*2
+            width: 48%
+            @media (max-width: 500px)
+                width: 100%
+            label
+                display: block
+                letter-spacing: 3.5px
+                margin-bottom: $largeMargin
+            input
+                @include resetBorder
+                padding: $largePadding
+                @include setWidthHeight(100%, 44px)
+                border: 1px solid $fadeGray
+                #name, #email_id
+                    resize: none
+
+    .form_textarea_div
+        padding-top: $largePadding
+        textarea
+            @include resetBorder
+            border: 1px solid #222
+            @include setWidthHeight(100%, 200px)
+            resize: none
+            &::placeholder
+                opacity: $highOpacity
+
+    .form_action_div
+        padding-top: $largePadding*2
+        @media (max-width: 500px)
+            display: flex
+            flex-direction: column
+        input
+            box-shadow: $boxShadow
+            cursor: pointer
+            height: 44px
+            letter-spacing: 3px
+            @include resetBorder
+            margin-right: 10px
+            @media (max-width: 500px)
+                margin-bottom: $standardMargin
+                width: 100%
+
+        input[type="submit"],
+        input[type="reset"]
+            &:hover
+                color: inherit
+                background: #d4812d
