@@ -1,0 +1,293 @@
+// Variables
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;900&family=Poppins:wght@400;500;600;700;900&family=Ultra&family=Rubik:wght@400;700;800;900&family=Source+Sans+Pro:wght@400;600;700;900&display=swap')
+    
+// Font sizes
+$standardFont: 1rem
+$extraSmallFont: 10px
+$smallFont: 14px
+$medFont: 1.25rem
+$semilargeFont: 1.5rem
+$largeFont: 1.75rem
+
+// Font weight
+$lightBold: 500
+$semiBold: 700
+$bold: 900
+
+// Colors
+$primary: #ff8c1b
+$link: #e77200
+$secondary: #94CF96
+$darkModeBg: #2e386a
+$lightModeBg: #fff
+$highlight: #F9AC19
+$lightFont: #efefef
+$fadeLight: #dcd9cd
+$darkFont: #222
+$grayFont: #3c3b3f
+$lightGray: #555
+$fadeGray: #888
+$blue: #0B4E91
+$danger: #D6535A
+$boxShadow: rgba(239, 239, 242, 0.3) 0px 0px 0px 0px, rgba(239, 239, 242, 0.15) 0px 0px 0px 2px
+$boxShadowHover: rgba(231, 89, 0, 0.25) 0px 13px 27px -5px,rgba(231, 89, 0, 0.3) 0px 8px 16px -8px
+
+// Margins and paddings
+$standardPadding: 0.5rem
+$smallPadding: 0.25rem
+$medPadding: 0.75rem
+$largePadding: 1rem
+
+$standardMargin: 0.5rem
+$smallMargin: 0.25rem
+$medMargin: 0.75rem
+$largeMargin: 1rem
+
+$minOpacity: 0
+$lowOpacity: 0.25
+$standardOpacity: 0.5
+$highOpacity: 0.75
+$maxOpacity: 1
+
+$transition: all 0.4s
+
+// Mixins
+@mixin resetStyle
+    margin: 0
+    padding: 0
+
+@mixin resetTextDecoration
+    text-decoration: none
+    list-style: none
+
+@mixin resetBorder
+    border: none
+    outline: 0
+
+@mixin inheritColors
+    color: inherit
+    background: inherit
+    
+
+@mixin setWidthHeight($width, $height)
+    width: $width
+    height: $height
+    
+@mixin displayJustifyAlign($display, $justify, $align, $wrap: unset)
+    display: $display
+    justify-content: $justify
+    align-items: $align
+    flex-wrap: $wrap
+    
+@mixin displayGridColRow($display, $columns, $rows)
+    display: $display
+    grid-template-columns: $columns
+    grid-template-rows: $rows
+
+@mixin textBgEffect
+    background-image: linear-gradient(90deg, #ff8c1b, #ff8c1b)
+    background-size: 0% 1px
+    background-repeat: no-repeat
+    background-position: left bottom
+    transition: 500ms ease
+@mixin textHover
+    background-size: 100% 2px
+
+@mixin allButtonStyle
+    @include resetTextDecoration
+    padding: $smallPadding $medPadding
+    color: #222
+    margin: 0
+    border: 1px solid #222
+    border-radius: 100px
+    box-shadow: rgba(0, 0, 0, 0.75) 0px 5px 0px 0px
+    background: #ff8c1b
+    background: -webkit-linear-gradient(to right, #ff8c1b, #FBAB7E)  
+    background: linear-gradient(to right, #ff8c1b, #FBAB7E) 
+    transition: $transition
+    opacity: $maxOpacity
+    &:hover
+        text-decoration: none
+        color: #224EFD
+
+@mixin zoomAnimation
+    object-fit: cover
+    animation: zoomAnimation 6s infinite alternate
+    @keyframes zoomAnimation
+        0%
+            transform: scale(1)
+        100%
+            transform: scale(1.2) 
+
+// End of Mixins
+
+// Dark mode Styling
+.dark_mode
+    background: #2e386a
+    color: #eee
+    .hero_section,
+    .projects_section,
+    .blog_container_div,
+    .experience_wrapper_div,
+    .loader_container,
+    .wrapper_1,
+    .wrapper_2,
+    .wrapper_3,
+    .skills_items_div span
+        background: #2e386a !important
+        background: url("./assets/imgs/graph_bg.png") center/cover no-repeat !important
+        box-shadow: $boxShadow 
+    .card, .blog_item
+        box-shadow: $boxShadow !important
+
+    // gradient_text in dark mode
+    #theme_btn.dark_mode_gradient_text,
+    .heading.dark_mode_gradient_text,
+    .project_div h3.dark_mode_gradient_text,
+    .career_section_text h2.dark_mode_gradient_text,
+    .floating_card_div p.dark_mode_gradient_text,
+    .floating_card_div p.dark_mode_gradient_text,
+    .blog_container_div a.dark_mode_gradient_text,
+    .footer_section span.dark_mode_gradient_text,
+    .skills_heading_div h3.dark_mode_gradient_text,
+    .nav_item.dark_mode_gradient_text,
+    .copyright_text
+        font-weight: 700
+        background: #ff8c1b
+        background: linear-gradient(to right, #ff8c1b 0%,#f6d365 50%, #fda085 100%)
+        -webkit-background-clip: text
+        -webkit-text-fill-color: transparent
+
+// End of Dark Mode Styling
+
+// Global styling
+* 
+    scroll-behavior: smooth
+    box-sizing: border-box
+    font-weight: 400
+    font-family: 'Archivo', sans-serif
+
+body
+    overflow-x: hidden
+    width: 100%
+    @media screen and (min-width: 1500px)
+        max-width: 1500px
+        margin: auto !important
+
+html
+    &::-webkit-scrollbar 
+        width: 1rem
+    &::-webkit-scrollbar-track 
+        background: transparent
+    &::-webkit-scrollbar-thumb 
+        background: #f5c392
+    overflow-x: hidden
+    
+h1,
+h2,
+h3 
+    font-weight: $semiBold !important
+
+h1
+    font-size: $largeFont
+
+h2
+    font-size: $semilargeFont
+
+h3
+    font-size: $medFont
+
+.standard_text
+    font-size: 18px
+
+.small_text
+    font-size: 20px
+
+.medium_text
+    font-size: 24px
+
+.large_text
+    font-size: 28px
+
+.heading
+    font-size: 2rem
+    font-weight: 800 !important
+    font-family: "Rubik", sans-serif !important
+    text-transform: uppercase
+
+.light_mode_gradient_text
+    font-weight: 700
+    color: #333
+
+.all_button
+    @include resetBorder
+    @include allButtonStyle
+
+.default_padding
+    padding-top: 45px
+
+// End of Global styling
+
+// General Styling
+a.nav_link
+    @include textBgEffect
+
+a.nav_link:hover
+    @include textHover
+
+.overlay 
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    height: 100vh
+    backdrop-filter: blur(10px)
+    overflow-y: hidden
+    background-color: rgba(0, 0, 0, 0.5)
+    z-index: 1000
+    display: none
+
+.skills_items_div
+    span
+        display: inline-block
+        padding: 0.5rem 1rem
+        margin: 0.35rem
+        background: #e2e2e2
+        border-radius: 100px
+        @media screen and (max-width: 500px)
+            font-size: 18px
+        @media screen and (max-width: 320px)
+            font-size: 15px
+
+.flowing_underline
+    padding-bottom: 8px
+    background-image: repeating-linear-gradient(-45deg,#ffb400,#e77200 1px, transparent 0, transparent 12px),repeating-linear-gradient(45deg,#ffb400,#ffb400 1px, transparent 0, transparent 12.2px)
+    background-position: 0 100%, 2px 100%
+    background-size: 15px 10px
+    background-repeat: repeat-x
+    animation: 0.8s infinite normal underline_flow_animation
+    animation-timing-function: linear
+
+    @keyframes underline_flow_animation 
+        0% 
+            background-position-x: 0, 2px
+        100% 
+            background-position-x: 17px, 19px
+
+// text shadow for mobile nav menu
+@media screen and (max-width: 1024px)
+    .shadowed_text
+        font-size: 4rem
+        font-weight: 900 !important
+        color: #ffcc00 !important
+        letter-spacing: 1px
+        text-shadow: -6px -6px #e77200, -5px -5px #e77200, -4px -4px #e77200, -3px -3px #e77200, -2px -2px #e77200, -1px -1px #e77200, 1px 1px #e77200, 2px 2px #e77200, 3px 3px #e77200, 4px 4px #e77200, 5px 5px #e77200, 6px 6px #e77200, 7px 7px #e77200, 8px 8px #e77200, 9px 9px #e77200, 10px 10px #e77200, 11px 11px #e77200, 12px 12px #e77200, 13px 13px #e77200, 14px 14px #e77200, 15px 15px #e77200
+        @media screen and (max-width: 768px) 
+            font-size: 3rem
+
+// End of General Styling
+
+
+
+
+    
