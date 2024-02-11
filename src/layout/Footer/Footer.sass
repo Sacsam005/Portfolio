@@ -1,0 +1,59 @@
+@import "../../App.sass"
+    
+.footer_section
+    position: relative
+    @include setWidthHeight(100%, auto)
+    overflow-x: hidden
+    @media screen and (max-width: 768px)
+        padding-top: $largePadding
+
+    .footer_div_wrapper
+        width: 100%
+        @include displayGridColRow(grid , repeat(2, 1fr), auto)
+        place-items: center !important
+        @media screen and (max-width: 768px)
+            width: 100%
+            padding: 0
+        @media screen and (max-width: 600px)
+            grid-template-columns: 1fr
+            justify-items: left !important
+
+        .quote_div
+            strong
+                line-height: 1.2
+                &::before
+                    content: "\201C"
+                    font-size: 3rem
+
+        .footer_social_links_div
+            @media screen and (max-width: 1024px)
+                @include displayJustifyAlign(flex, center, center)
+                flex-direction: column
+                margin: $standardMargin auto
+
+            .fa-arrow-right 
+                color: $link
+
+            .form-inline
+                padding: $smallPadding 0
+
+                .input-group
+                    box-shadow: rgb(51, 51, 51) 0px 0px 0px 1px
+                    border-radius: 1rem
+                    .form-control
+                        background: $lightFont
+                        border-top-left-radius: 1rem
+                        border-bottom-left-radius: 1rem
+
+                    .input-group-text
+                        border-radius: 0
+                        border-top-right-radius: 1rem
+                        border-bottom-right-radius: 1rem
+
+.progress
+    height: 8px
+    background-color: #ff8c1b
+    position: fixed
+    bottom: 0
+    left: 0
+    right: 0
