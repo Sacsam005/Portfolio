@@ -1,0 +1,147 @@
+@import "../../App.sass"
+
+.career_section_wrapper
+    border-top: 1px solid #555
+    border-bottom: 1px solid #555
+    @include setWidthHeight(100%, 100%)
+    @include displayJustifyAlign(flex, space-between, center, wrap)
+    overflow: hidden
+    @media screen and (max-width: 964px)
+        border-left: none
+        
+
+    .career_section_image
+        flex: 1 1 30rem
+        @include displayJustifyAlign(flex, center, center)
+        box-sizing: border-box
+        img
+            max-width: 85%
+        &:not(.career_image_overflow)
+            @include zoomAnimation
+
+    .career_image_overflow
+        height: 30rem
+        .cube_container
+            perspective: 600px
+            .cube
+                position: relative
+                @include setWidthHeight(300px, 300px)
+                transform-style: preserve-3d
+                animation: spin 18s linear infinite
+                @include displayJustifyAlign(flex, center , center)
+                .cube__face
+                    position: absolute
+                    @include setWidthHeight(100%, 100% )
+                    @include displayJustifyAlign(flex, center, center)
+                    border: 1px solid $link
+                    
+                    img
+                        max-width: 100%
+                        object-fit: contain
+
+                .cube-face--left 
+                    transform: rotateY(-90deg) translateZ(150px)
+
+                .cube-face--front 
+                    transform: rotateY(0deg) translateZ(150px)
+                
+                .cube-face--back 
+                    transform: rotateY(180deg) translateZ(150px)
+
+                .cube-face--right 
+                    transform: rotateY(90deg) translateZ(150px)
+                
+                .cube-face--top 
+                    transform: rotateX(90deg) translateZ(150px)
+
+                .cube-face--bottom 
+                    transform: rotateX(-90deg) translateZ(150px)
+
+                @keyframes spin 
+                    from 
+                        transform: rotateY(0)
+                    to 
+                        transform: rotateY(1turn)
+
+    .career_section_text
+        -webkit-box-flex: 1
+        -ms-flex: 1 30rem
+        flex: 1 30rem
+        position: relative
+        border-left: 1px solid #555
+        @media screen and (max-width: 964px)
+            border-left: none
+        
+        &:nth-child(odd)
+            border-left: none
+
+        h2
+            border-bottom: 1px solid #555
+            @media screen and (max-width: 964px)
+                border-top: 1px solid #555
+            
+        ul
+            list-style: square
+            line-height: 1.5
+            padding-left: 1.1rem !important
+            @media screen and (max-width: 964px)
+                padding-left: 1.2rem !important
+                padding-right: 0.1rem
+            li
+                margin: 5px 0
+            
+    .popup
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%) scale(0)
+        overflow-y: auto
+        visibility: hidden
+        opacity: $lowOpacity
+        transition: $transition
+        z-index: 4
+        min-width: 100%
+        max-height: 100%
+        height: auto
+        background: $fadeLight
+        border-left: 1rem solid $primary
+            
+        .close
+            position: fixed !important
+            top: 0.5rem
+            left: 0.5rem
+            right: 0
+            font-size: $largeFont
+            color: $danger
+            transition: $transition
+            &:hover
+                cursor: pointer
+        
+        .popup_text
+            ul
+                list-style: square
+                z-index: 1
+                li
+                    text-align: left
+                    line-height: 1.4
+                    margin: $medMargin 0 0 0
+        
+        &.open
+            visibility: visible
+            opacity: $maxOpacity
+            transform: translate(-50%, -50%) scale(1)
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(231, 114, 0, 0.8) 0px 0px 0px 3px
+            @media screen and (min-width: 768px)
+                max-height: 100%
+                height: auto
+
+// career_highlights_wrappers
+.wrapper_1
+        background: #72CAFF
+        border-bottom: 0
+.wrapper_2
+        background: #E8D480
+        flex-wrap: wrap-reverse !important
+        border-bottom: 0
+.wrapper_3
+        background: #6CCFB9

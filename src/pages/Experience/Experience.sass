@@ -1,0 +1,80 @@
+@import "../../App.sass"
+
+.experience_wrapper_div
+    position: relative
+    border-top: 1px solid #555
+    border-bottom: 1px solid #555
+    background: #efefef
+    @include displayJustifyAlign(flex, center, flex-start)
+    &::before
+        content: ""
+        position: absolute
+        top: 0
+        left: 50%
+        bottom: 0
+        width: 1px 
+        height: 100%
+        background-color: #555
+    @media screen and (max-width: 768px)
+        flex-direction: column
+        align-items: center
+        &::before
+            width: 0px
+    
+    .skill_items_container,
+    .experience__items_list
+        width: 50%
+        @include displayJustifyAlign(flex, center, center)
+        @media screen and (max-width: 768px)
+            width: 100%
+
+    .skill_items_container
+        img
+            align-items: center
+            animation: floating 5s linear infinite alternate-reverse
+            @media screen and (max-width: 360px)
+                width: 100%
+
+    .experience__items_list
+        @include displayJustifyAlign(flex, center, center)
+        flex-direction: column
+        padding: 0.5rem
+        margin: 0 0.1rem
+        
+        .item 
+            width: 100%
+            max-width: 300px
+            margin: $smallMargin 0
+            padding: $smallPadding $medPadding
+            border-radius: 12px
+            background: #fff
+            line-height: 2
+            list-style-type: square
+            @media screen and (max-width: 500px)
+                margin: 5px 5px 5px 10px
+                padding: 0 10px
+            @media screen and (max-width: 300px)
+                max-width: 250px
+                margin-left: 1rem
+
+            .item__timespan
+                font-size: $extraSmallFont
+                font-weight: $semiBold
+
+            .item__company_title 
+                font-weight: $semiBold
+                
+            .christus
+                color: #ac75e9
+            .treetech
+                color: #4ab25d
+
+            .item__job_title 
+                font-weight: $lightBold
+
+            .item__company_title 
+                &:hover 
+                    color: $primary
+                    transition: all 0.2s ease
+
+            
