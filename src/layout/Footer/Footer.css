@@ -1,0 +1,181 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;900&family=Poppins:wght@400;500;600;700;900&family=Source+Sans+Pro:wght@400;600;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Hind+Madurai:wght@300;400;500;600;700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Space+Grotesk:wght@300..700&display=swap");
+.dark_mode {
+  background: #2f2f2f;
+  color: #ddd;
+}
+.dark_mode .hero_section,
+.dark_mode .about_section,
+.dark_mode .career_section_wrapper,
+.dark_mode .loader_container,
+.dark_mode .about_container,
+.dark_mode .work_history_div,
+.dark_mode .skills_item {
+  background: #2f2f2f !important;
+}
+.dark_mode .hero_section {
+  border: 1px solid #555;
+  border-top: none;
+}
+.dark_mode .about_container, .dark_mode .work_history_div {
+  border-top: 1px solid #555;
+  border-bottom: 1px solid #555;
+}
+.dark_mode .skills_item {
+  border: 1px solid #555;
+}
+.dark_mode .dark_mode_gradient_text {
+  font-weight: 700;
+  background: #ff8c1b;
+  background: linear-gradient(to right, #ff8c1b 0%, #f6d365 50%, #fda085 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+* {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  font-weight: 400;
+  font-family: "Archivo", sans-serif;
+}
+
+body, html {
+  overflow-x: hidden;
+  width: 100%;
+}
+@media screen and (min-width: 1500px) {
+  body, html {
+    max-width: 1500px;
+    margin: auto !important;
+  }
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 700 !important;
+}
+
+h1 {
+  font-size: 1.75rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+.standard_text {
+  font-size: 18px;
+}
+
+.small_text {
+  font-size: 20px;
+}
+
+.medium_text {
+  font-size: 24px;
+}
+
+.heading {
+  font-size: 2rem;
+  font-weight: 800 !important;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.light_mode_gradient_text {
+  font-weight: 700;
+  color: #333;
+  background: #555;
+  background: linear-gradient(to top, #434343, #555);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.all_button {
+  border: none;
+  outline: 0;
+  text-decoration: none;
+  list-style: none;
+  padding: 0.25rem 0.75rem;
+  color: #222;
+  margin: 0;
+  border: 1px solid #222;
+  border-radius: 100px;
+  box-shadow: rgba(0, 0, 0, 0.75) 0px 5px 0px 0px;
+  background: #ff8c1b;
+  background: linear-gradient(to right, #ff8c1b, #FBAB7E);
+  transition: all 0.4s;
+  opacity: 1;
+}
+.all_button:hover {
+  text-decoration: none;
+  color: #224EFD;
+}
+
+a.nav_link {
+  background-image: linear-gradient(90deg, #ff8c1b, #ff8c1b);
+  background-size: 0% 1px;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  transition: 500ms ease;
+}
+
+a.nav_link:hover {
+  background-size: 100% 2px;
+}
+
+.skill_span {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  margin: 0.25rem;
+  background: #fff !important;
+  border-radius: 100px;
+  border: 1px solid #555;
+  border-color: transparent;
+}
+@media screen and (max-width: 500px) {
+  .skill_span {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .skill_span {
+    font-size: 15px;
+  }
+}
+
+.flowing_underline {
+  padding-bottom: 8px;
+  background-image: repeating-linear-gradient(-45deg, #ffb400, #e77200 1px, transparent 0, transparent 12px), repeating-linear-gradient(45deg, #ffb400, #ffb400 1px, transparent 0, transparent 12.2px);
+  background-position: 0 100%, 2px 100%;
+  background-size: 15px 10px;
+  background-repeat: repeat-x;
+  animation: 0.8s infinite normal underline_flow_animation;
+  animation-timing-function: linear;
+}
+@keyframes underline_flow_animation {
+  0% {
+    background-position-x: 0, 2px;
+  }
+  100% {
+    background-position-x: 17px, 19px;
+  }
+}
+
+.footer_div_wrapper strong {
+  line-height: 1;
+}
+.footer_div_wrapper strong span {
+  background: linear-gradient(90deg, #555 0%, #cd6804 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.footer_div_wrapper strong::before {
+  content: "“";
+  font-size: 5rem;
+}/*# sourceMappingURL=Footer.css.map */

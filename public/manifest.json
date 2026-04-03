@@ -1,0 +1,31 @@
+{
+  "name": "Sachin Samal | Web Developer",
+  "short_name": "Portfolio",
+  "description": "Web developer with an experience in design, development, and implementation of strategic architectures of web and mobile applications at an enterprise level.",
+  "icons": [
+    {
+      "src": "./favicons/sachin-samal_16x16.png",
+      "sizes": "16x16",
+      "type": "image/png"
+    },
+    {
+      "src": "./favicons/sachin-samal_24x24.png",
+      "sizes": "24x24",
+      "type": "image/png"
+    },
+    {
+      "src": "./favicons/sachin-samal_32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "./favicons/sachin-samal_48x48.png",
+      "sizes": "48x48",
+      "type": "image/png"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}

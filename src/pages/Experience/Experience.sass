@@ -1,0 +1,104 @@
+@import "../../App.sass"
+
+// .experience_wrapper_div
+//     position: relative
+//     border-top: 1px solid #555
+//     border-bottom: 1px solid #555
+//     background: #efefef
+//     @include displayJustifyAlign(flex, center, flex-start)
+//     &::before
+//         content: ""
+//         position: absolute
+//         top: 0
+//         left: 50%
+//         bottom: 0
+//         width: 1px 
+//         height: 100%
+//         background-color: #555
+//     @media screen and (max-width: 768px)
+//         flex-direction: column
+//         align-items: center
+//         &::before
+//             width: 0px
+    
+//     .skill_items_container,
+//     .experience__items_list
+//         width: 50%
+//         @include displayJustifyAlign(flex, center, center)
+//         @media screen and (max-width: 768px) 
+//             width: 100%
+
+//     .skill_items_container
+//         img
+//             align-items: center
+//             animation: floating 5s linear infinite alternate-reverse
+//             @media screen and (max-width: 360px)
+//                 width: 100%
+
+
+
+
+.about_section
+    .about_container
+        display: flex
+        background: #efefef
+        @media screen and (max-width: 992px)
+            flex-direction: column
+        
+        .about_text_container,
+        .skills_container
+            flex: 1
+            @media screen and (max-width: 320px)
+                font-size: 15px
+
+.work_history_container
+    @include displayJustifyAlign(flex, center, center)
+    flex-direction: column
+    margin: 0 auto
+
+    .work_history_div
+        width: 100%
+        background: #efefef
+
+        ul
+            width: 100%
+            max-width: 300px
+            @include displayJustifyAlign(flex, center, flex-start)
+            margin: 0 auto
+            flex-direction: column
+            text-align: left
+            @media screen and (max-width: 500px)
+                max-width: 100%
+
+            .item 
+                line-height: 1.75
+                list-style-type: square
+
+                @media screen and (max-width: 500px)
+                    margin: 5px 5px 5px 10px
+                    padding: 0 10px
+                @media screen and (max-width: 300px)
+                    margin-left: 1rem
+
+                .item__timespan
+                    font-size: $smallFont
+
+                .item__company_title
+                    font-weight: $semiBold
+                    
+                .christus
+                    color: #ac75e9
+                .treetech
+                    color: #4ab25d
+
+                .item__job_title 
+                    font-weight: $lightBold
+
+                .item__company_title 
+                    &:hover 
+                        color: $primary
+                        transition: all 0.2s ease
+
+        hr
+            @media screen and (max-width: 500px)
+                width: 90% !important
