@@ -19,13 +19,12 @@ const Footer = ({ quoteTitle, quoteText, quoteSource }) => {
                     Let's grow together ✴︎ Happy web development! ✴︎ Let's grow
                     together ✴︎ Happy web development! ✴︎ Let's grow together ✴︎
                     Happy web development! ✴︎ Let's grow together ✴︎ Happy web
-                    development! ✴︎ Let's grow together ✴︎ Happy web
-                    development! ✴︎ Let's grow together ✴︎ Happy web
-                    development! ✴︎ Let's grow together ✴︎ Happy web
-                    development! ✴︎ Let's grow together ✴︎ Happy web
-                    development! ✴︎ Let's grow together ✴︎ Happy web
-                    development! ✴︎ Let's grow together ✴︎ Happy web
-                    development! ✴︎
+                    development! ✴︎ Let's grow together ✴︎ Happy web development!
+                    ✴︎ Let's grow together ✴︎ Happy web development! ✴︎ Let's grow
+                    together ✴︎ Happy web development! ✴︎ Let's grow together ✴︎
+                    Happy web development! ✴︎ Let's grow together ✴︎ Happy web
+                    development! ✴︎ Let's grow together ✴︎ Happy web development!
+                    ✴︎
                 </p>
             </MarqueText>
 
@@ -39,7 +38,7 @@ const Footer = ({ quoteTitle, quoteText, quoteSource }) => {
                     borderTopRightRadius: "2rem",
                 }}
             >
-                <div className="footer_div_wrapper text-center p-2">
+                <div className="footer_div_wrapper text-center p-3">
                     <strong>
                         <span
                             className={
@@ -65,7 +64,7 @@ const Footer = ({ quoteTitle, quoteText, quoteSource }) => {
                 </div>
 
                 <p
-                    className={`copyright_text text-center mt-4 mb-0 py-2 ${
+                    className={`copyright_text text-center mb-0 p-3 ${
                         darkMode
                             ? "dark_mode_gradient_text"
                             : "light_mode_gradient_text"

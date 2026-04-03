@@ -37,12 +37,11 @@ const Hero = () => {
                         initial="hidden"
                         animate="visible"
                     >
-                        I am an{" "}
+                        I am a{" "}
                         <span className="flowing_underline">
-                            experienced web developer
+                            software developer
                         </span>{" "}
-                        who enjoys developing efficient, accessible digital
-                        solutions and tackling their challenges.
+                        exploring how we experience the digital world.
                     </motion.p>
                 </motion.div>
             </HeroSection>
