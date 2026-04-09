@@ -116,6 +116,10 @@ h3 {
   color: #224EFD;
 }
 
+li {
+  margin: 1rem 0 !important;
+}
+
 a.nav_link {
   background-image: linear-gradient(90deg, #ff8c1b, #ff8c1b);
   background-size: 0% 1px;

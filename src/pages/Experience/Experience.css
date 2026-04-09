@@ -81,7 +81,7 @@ h3 {
 }
 
 .heading {
-  font-size: 2rem;
+  font-size: 5rem;
   font-weight: 800 !important;
   font-family: "Space Grotesk", sans-serif;
 }
@@ -114,6 +114,10 @@ h3 {
 .all_button:hover {
   text-decoration: none;
   color: #224EFD;
+}
+
+li {
+  margin: 1rem 0 !important;
 }
 
 a.nav_link {

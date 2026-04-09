@@ -13,7 +13,7 @@ const Hero = () => {
                 id="hero_section"
             >
                 <motion.h1
-                    className={`heading text-center pt-5 px-2 ${
+                    className={`super_heading text-center pt-5 px-2 ${
                         darkMode
                             ? "dark_mode_gradient_text"
                             : "light_mode_gradient_text"
@@ -22,7 +22,9 @@ const Hero = () => {
                     initial="hidden"
                     animate="visible"
                 >
-                    Hello world, I'm Sachin Samal!
+                    Hello World!
+                    <br />
+                    I'm Sachin Samal
                 </motion.h1>
 
                 <motion.div
@@ -37,7 +39,7 @@ const Hero = () => {
                         initial="hidden"
                         animate="visible"
                     >
-                        I am a{" "}
+                        a{" "}
                         <span className="flowing_underline">
                             software developer
                         </span>{" "}
@@ -54,15 +56,16 @@ const HeroSection = styled.section`
     border-bottom-left-radius: 3rem;
     border-bottom-right-radius: 3rem;
 
-    h1 {
+    .super_heading {
         font-size: min(max(60px, 11.111vw), 80px);
         font-family: "Space Grotesk", sans-serif;
-        @media (max-width: 1100px) {
-            font-size: 4rem;
-            padding-top: 4rem !important;
+        padding-top: 6rem !important;
+        @media (min-width: 1024px) {
+            font-size: 8rem !important;
         }
-        @media (max-width: 768px) {
+        @media (max-width: 1024px) {
             font-size: 2rem;
+            padding-top: 5rem !important;
         }
     }
 
